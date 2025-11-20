@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanessa Pimentel Nutri - ReConecte</title>
+    <meta name="description" content="Programa ReConecte - Seu intestino está pedindo ajuda e eu vou te escutar de verdade.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles and Animations -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #1e293b; /* slate-800 */
+            overflow-x: hidden;
+        }
+
+        /* Animated Gradient Background for Hero and Final CTA */
+        .animated-gradient {
+            background: linear-gradient(135deg, #edf2f7, #e2e8f0, #f0f9ff);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Scroll-triggered Fade-in Animation */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Selection Color */
+        ::selection {
+            background-color: #D16624;
+            color: white;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 0. Navigation Bar (Fixed) -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/60 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="text-xl font-bold text-slate-800 tracking-tight">
+                    Vanessa Pimentel <span style="color: #D16624;">Nutri</span>
+                </a>
+                
+                <!-- Desktop Links -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                    <a href="#problema" class="text-slate-600 hover:text-[#D16624] transition-colors">O Problema</a>
+                    <a href="#reconecte" class="text-slate-600 hover:text-[#D16624] transition-colors">O Programa</a>
+                    <a href="#sobre" class="text-slate-600 hover:text-[#D16624] transition-colors">Sobre a Nutri</a>
+                    <a href="#investimento" class="text-slate-600 hover:text-[#D16624] transition-colors">Investimento</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <a href="https://wa.me/5511980774485?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20bio%20e%20gostaria%20de%20falar%20sobre%20o%20ReConecte." class="hidden md:inline-block bg-[#D16624] text-white font-semibold text-sm px-5 py-2.5 rounded-lg shadow-sm hover:bg-[#b8561f] transition-all duration-300 transform hover:scale-105 hover:shadow-md">
+                    Falar no WhatsApp
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-slate-700 p-2 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-6 pb-6 pt-2 shadow-lg absolute w-full">
+             <a href="#problema" class="block py-3 text-slate-600 hover:text-[#D16624] border-b border-slate-50">O Problema</a>
+             <a href="#reconecte" class="block py-3 text-slate-600 hover:text-[#D16624] border-b border-slate-50">O Programa</a>
+             <a href="#sobre" class="block py-3 text-slate-600 hover:text-[#D16624] border-b border-slate-50">Sobre a Nutri</a>
+             <a href="#investimento" class="block py-3 text-slate-600 hover:text-[#D16624]">Investimento</a>
+             <a href="https://wa.me/5511980774485?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20bio%20e%20gostaria%20de%20falar%20sobre%20o%20ReConecte." class="block mt-4 w-full text-center bg-[#D16624] text-white font-semibold px-5 py-3 rounded-lg shadow-sm hover:bg-[#b8561f]">Falar no WhatsApp</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="animated-gradient pt-32 pb-20 lg:pt-44 lg:pb-32 relative overflow-hidden">
+            <!-- Decorative background element -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-[#D16624] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+            <div class="absolute top-0 left-0 -ml-20 -mt-20 w-96 h-96 bg-emerald-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+
+            <div class="container mx-auto px-6 text-center relative z-10">
+                 <div class="fade-in-section">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] tracking-tight">
+                        Seu intestino está pedindo ajuda <br class="hidden md:block"> <span class="text-[#D16624]">e eu vou te escutar de verdade.</span>
+                    </h1>
+                    <h2 class="mt-6 text-xl md:text-2xl text-slate-700 max-w-3xl mx-auto font-medium leading-relaxed">
+                        Inchaço, gases, dor, constipação e desconforto que ninguém leva a sério? <br>
+                        <span class="font-bold text-slate-800">Aqui, sua dor é validada. Aqui, você não tenta sozinha.</span>
+                    </h2>
+                    
+                    <div class="mt-10">
+                        <a href="https://wa.me/5511980774485?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20bio%20e%20gostaria%20de%20falar%20sobre%20o%20ReConecte." class="inline-flex items-center bg-[#25D366] text-white font-bold px-8 py-4 rounded-full shadow-lg hover:bg-[#20bd5a] hover:-translate-y-1 transition-all duration-300">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                            Quero conversar sobre o meu caso
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Down Arrow Separator -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+                <a href="#problema" class="bg-white/80 p-2 rounded-full shadow-lg border border-slate-200/80 backdrop-blur block text-[#D16624] hover:bg-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. The Problem Section -->
+        <section id="problema" class="pt-24 pb-20 lg:pt-32 lg:pb-28 bg-white relative">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div class="fade-in-section order-2 lg:order-1">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 leading-tight"><span style="color: #D16624;">O problema não é você.</span> <br>É que ninguém investigou a causa real.</h2>
+                        <div class="mt-6 text-lg text-slate-600 space-y-4 leading-relaxed">
+                           <p>A maioria dos profissionais olha apenas para sintomas e exames. Mas ignora o desequilíbrio silencioso da <strong>micobiota intestinal</strong> que inflama seu corpo e comanda sua rotina sem que você perceba.</p>
+                           <p class="font-medium text-slate-800 border-l-4 border-[#D16624] pl-4">Se você acorda bem e termina o dia parecendo grávida, isso não é “normal”. Isso é um pedido de socorro do seu corpo.</p>
+                        </div>
+
+                         <div class="mt-8">
+                            <a href="https://wa.me/5511980774485?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20bio%20e%20gostaria%20de%20falar%20sobre%20o%20ReConecte." class="inline-flex items-center bg-[#D16624] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-[#b8561f] hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                Quero entender se isso é o meu caso
+                            </a>
+                         </div>
+                    </div>
+                    
+                    <div class="flex justify-center fade-in-section order-1 lg:order-2" style="transition-delay: 200ms;">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-[#D16624] rounded-2xl transform rotate-3 opacity-20"></div>
+                            <img src="https://i.imgur.com/K53iLMB.jpg" 
+                                 referrerpolicy="no-referrer"
+                                 alt="Mulher demonstrando desconforto abdominal" 
+                                 class="relative rounded-2xl shadow-2xl w-full max-w-md object-cover aspect-[4/5] z-10 bg-slate-200">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 3. What is ReConecte Section -->
+        <section id="reconecte" class="py-20 lg:py-28 bg-slate-900 text-white relative overflow-hidden">
+            <!-- Background pattern -->
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                 <div class="text-center fade-in-section mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold mt-2 leading-snug text-[#D16624]">O que é o ReConecte</h2>
+                    
+                    <p class="mt-6 text-lg md:text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+                        Um acompanhamento de 6 meses feito para te aliviar, te acolher e te ajudar a entender o que seu corpo tenta dizer. Com escuta de verdade, investigação profunda e suporte real, todos os dias.
+                    </p>
+
+                    <h3 class="mt-8 text-xl md:text-2xl font-semibold text-white">O que você recebe? E como isso muda sua vida?</h3>
+                </div>
+                
+                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 fade-in-section">
+                    <!-- Item 1 -->
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-[#D16624]/50 transition-colors">
+                        <div class="flex items-start mb-3">
+                            <span class="text-emerald-400 mr-3 text-xl mt-0.5">✔</span>
+                            <h4 class="text-lg font-bold text-white">3 consultas profundas</h4>
+                        </div>
+                        <p class="text-slate-300 ml-8 leading-relaxed">Descobrimos a causa real do seu inchaço, gases, dor e constipação, mesmo quando seus exames dizem “normal”.</p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-[#D16624]/50 transition-colors">
+                        <div class="flex items-start mb-3">
+                            <span class="text-emerald-400 mr-3 text-xl mt-0.5">✔</span>
+                            <h4 class="text-lg font-bold text-white">Análise funcional dos seus exames</h4>
+                        </div>
+                        <p class="text-slate-300 ml-8 leading-relaxed">Você finalmente entende o que está acontecendo no seu corpo. Chega de ouvir “tá tudo bem” quando você sabe que não está.</p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-[#D16624]/50 transition-colors">
+                        <div class="flex items-start mb-3">
+                            <span class="text-emerald-400 mr-3 text-xl mt-0.5">✔</span>
+                            <h4 class="text-lg font-bold text-white">Plano alimentar personalizado para comer sem medo</h4>
+                        </div>
+                        <p class="text-slate-300 ml-8 leading-relaxed">Um roteiro que desinflama, melhora sua digestão e devolve conforto depois de comer. Sem culpa e sem terrorismo alimentar.</p>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-[#D16624]/50 transition-colors">
+                        <div class="flex items-start mb-3">
+                            <span class="text-emerald-400 mr-3 text-xl mt-0.5">✔</span>
+                            <h4 class="text-lg font-bold text-white">6 meses de suporte direto no meu WhatsApp</h4>
+                        </div>
+                        <p class="text-slate-300 ml-8 leading-relaxed">Ajustes, dúvidas, crises, inseguranças… <br>Eu estou com você diariamente. Você não faz isso sozinha.</p>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-[#D16624]/50 transition-colors">
+                        <div class="flex items-start mb-3">
+                            <span class="text-emerald-400 mr-3 text-xl mt-0.5">✔</span>
+                            <h4 class="text-lg font-bold text-white">Indicação inteligente de suplementos</h4>
+                        </div>
+                        <p class="text-slate-300 ml-8 leading-relaxed">Só quando necessário, com propósito claro pra acelerar sua recuperação sem desperdiçar dinheiro.</p>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-[#D16624]/50 transition-colors">
+                        <div class="flex items-start mb-3">
+                            <span class="text-emerald-400 mr-3 text-xl mt-0.5">✔</span>
+                            <h4 class="text-lg font-bold text-white">Recibo para reembolso</h4>
+                        </div>
+                        <p class="text-slate-300 ml-8 leading-relaxed">Se seu plano permitir, você recebe boa parte do investimento de volta.</p>
+                    </div>
+                </div>
+                
+                 <div class="text-center mt-12 fade-in-section">
+                     <a href="https://wa.me/5511980774485?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20bio%20e%20gostaria%20de%20falar%20sobre%20o%20ReConecte." class="inline-block bg-emerald-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg shadow-emerald-900/50 hover:bg-emerald-500 transition-all duration-300 transform hover:scale-105">
+                        Quero saber como funciona na prática
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Target Audience Section -->
+        <section class="py-20 lg:py-28 bg-slate-50 relative">
+             <div class="container mx-auto px-6">
+                 <div class="max-w-3xl mx-auto fade-in-section bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">Para quem é</h2>
+                    <p class="text-lg text-slate-600 mb-6 font-medium">Para mulheres que:</p>
+                    <ul class="space-y-4 text-slate-700">
+                        <li class="flex items-start"><span class="text-[#D16624] mr-3 mt-1">✔</span><span>terminam o dia estufadas</span></li>
+                        <li class="flex items-start"><span class="text-[#D16624] mr-3 mt-1">✔</span><span>têm prisão de ventre, gases ou dor constante</span></li>
+                        <li class="flex items-start"><span class="text-[#D16624] mr-3 mt-1">✔</span><span>já tentaram outras nutris, dietas ou remédios</span></li>
+                        <li class="flex items-start"><span class="text-[#D16624] mr-3 mt-1">✔</span><span>têm SIBO, SII, gastrite ou refluxo</span></li>
+                        <li class="flex items-start"><span class="text-[#D16624] mr-3 mt-1">✔</span><span>querem comer sem medo</span></li>
+                        <li class="flex items-start"><span class="text-[#D16624] mr-3 mt-1">✔</span><span>querem voltar a confiar no próprio corpo</span></li>
+                    </ul>
+                 </div>
+             </div>
+        </section>
+
+        <!-- 5. About Vanessa Section -->
+        <section id="sobre" class="py-20 lg:py-28 bg-white relative">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Image Column -->
+                    <div class="flex justify-center fade-in-section">
+                        <div class="relative group">
+                            <div class="absolute inset-0 bg-slate-800 rounded-2xl transform translate-x-3 translate-y-3 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                            <img src="https://i.imgur.com/BZeVaYi.jpg" 
+                                 referrerpolicy="no-referrer"
+                                 alt="Vanessa Pimentel" 
+                                 class="relative rounded-2xl shadow-xl w-full max-w-sm object-cover bg-slate-200 border border-slate-200">
+                        </div>
+                    </div>
+                    
+                    <!-- Text Column -->
+                    <div class="fade-in-section">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-slate-900">Sobre mim</h2>
+                        <p class="mt-4 text-xl font-semibold text-[#D16624]">
+                            Prazer, Vanessa Pimentel.
+                        </p>
+                        <p class="text-lg text-slate-700 font-medium mb-4">Nutricionista especializada em saúde gastrointestinal e longevidade.</p>
+                        
+                        <div class="mt-6 text-lg text-slate-600 space-y-4 leading-relaxed">
+                           <p>Acompanhei centenas de mulheres que tinham a mesma dor: ninguém escutava o que o corpo delas estava tentando dizer.</p>
+                           <p class="font-bold text-slate-900 text-xl">Aqui, isso muda.</p>
+                        </div>
+
+                         <div class="mt-10">
+                             <a href="https://wa.me/5511980774485?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20bio%20e%20gostaria%20de%20falar%20sobre%20o%20ReConecte." class="inline-block bg-[#D16624] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-[#b8561f] transition-all duration-300 transform hover:scale-105">
+                                Quero conversar com a Vanessa
+                            </a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Investment Section -->
+        <section id="investimento" class="animated-gradient py-20 lg:py-28 relative">
+            <div class="container mx-auto px-6 max-w-4xl fade-in-section">
+                
+                <!-- Price Card -->
+                <div class="flex justify-center mb-16">
+                     <div class="bg-white relative z-10 rounded-3xl border-t-4 border-[#D16624] shadow-2xl w-full max-w-md overflow-hidden text-center">
+                        <div class="bg-[#D16624] py-3">
+                             <p class="text-sm font-bold uppercase tracking-widest text-white">Investimento no programa ReConecte</p>
+                        </div>
+                        <div class="p-10">
+                            <p class="text-slate-500 mb-6">Acompanhamento completo de 6 meses:</p>
+                            
+                            <div class="mb-8">
+                                <div class="flex flex-col items-center justify-center">
+                                    <span class="text-4xl md:text-5xl font-bold text-slate-900">2x de R$ 750,00</span>
+                                    <span class="text-lg text-slate-600 my-2">ou</span>
+                                    <span class="text-3xl font-bold text-emerald-600">R$ 1.500 à vista</span>
+                                </div>
+                            </div>
+
+                            <a href="https://wa.me/5511980774485?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20bio%20e%20gostaria%20de%20falar%20sobre%20o%20ReConecte." class="block w-full bg-slate-900 text-white font-bold text-lg px-6 py-4 rounded-xl shadow-lg hover:bg-slate-800 transition-all duration-300">
+                                Quero conversar sobre o ReConecte
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Investment -->
+                <div class="text-center">
+                    <h3 class="text-2xl lg:text-3xl font-bold text-slate-900 mb-6">Por que isso é um investimento inteligente para você?</h3>
+                    <div class="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-slate-200 text-left md:text-center">
+                        <p class="text-lg text-slate-700 mb-4">Porque o caro não é cuidar do intestino. O caro é continuar vivendo do mesmo jeito:</p>
+                        <ul class="inline-block text-left space-y-2 text-slate-600 mb-6">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>gastando com consultas avulsas</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>remédios que mascaram sintomas</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>suplementos aleatórios</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>dietas restritivas que não funcionam</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>e lidando com dor todos os dias</li>
+                        </ul>
+                        <p class="text-lg font-semibold text-[#D16624]">O ReConecte evita anos de tentativas frustradas e devolve a você leveza, clareza e confiança no próprio corpo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Limited Agenda / Final Section -->
+        <section class="py-20 bg-slate-900 text-white">
+            <div class="container mx-auto px-6 max-w-3xl text-center fade-in-section">
+                <div class="inline-block bg-yellow-500/20 text-yellow-300 border border-yellow-500/50 px-4 py-2 rounded-full font-bold mb-6 text-sm uppercase tracking-wide">
+                    ⚠️ Agenda limitada
+                </div>
+                <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-8">
+                    Por acompanhar cada paciente de perto por 6 meses, as vagas não são imediatas. Por isso, antes de tudo, converso com você para entender seu caso e te orientar sobre disponibilidade e próximos passos.
+                </p>
+                <p class="text-2xl font-semibold text-white mb-10">
+                    Isso não é venda. É acolhimento, clareza e responsabilidade.
+                </p>
+                <p class="text-slate-400 mb-8">
+                    Para conversar comigo, Vanessa, e entender se o ReConecte é pra você, toque no botão a seguir.
+                </p>
+                
+                <a href="https://wa.me/5511980774485?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20bio%20e%20gostaria%20de%20falar%20sobre%20o%20ReConecte." class="inline-block bg-[#25D366] text-white font-bold px-10 py-5 rounded-lg shadow-lg hover:bg-[#20bd5a] transition-all duration-300 transform hover:scale-105">
+                    Quero conversar com a Vanessa
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 8. Footer -->
+    <footer class="bg-slate-800 text-slate-400 py-12 border-t border-slate-700">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg text-slate-200 font-bold mb-2">Vanessa Pimentel Nutri</p>
+            <p class="text-sm">&copy; 2025 Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        // --- Navbar Shadow on Scroll ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md', 'bg-white/95');
+                navbar.classList.remove('bg-white/80');
+            } else {
+                navbar.classList.remove('shadow-md', 'bg-white/95');
+                navbar.classList.add('bg-white/80');
+            }
+        });
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- Fade-in on Scroll Animation ---
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+    });
+    </script>
+
+</body>
+</html>
